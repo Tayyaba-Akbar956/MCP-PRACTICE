@@ -248,14 +248,3 @@ async def intelligent_search(query: str, ctx: Context) -> dict:
 **Question:** This tool makes 2 sampling calls with different temperatures. How many round-trips happen? What's the latency impact? Would HTTP `json_response=False` change anything? Compare stdio vs SSE for this use case.
 
 ---
-
-### Question 12
-```python
-@mcp.tool()
-async def batch_analyze(items: list[str], ctx: Context) -> list[str]:
-    results = []
-    total = len(items)
-    
-    for i, item in enumerate(items):
-        await ctx.report_progress(i, total)
-        res
