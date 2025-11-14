@@ -1,4 +1,4 @@
-# MCP Advanced Practical Questions - Code Analysis (20 Questions)
+# MCP Advanced Practical Questions - Code Analysis
 
 ## Tools with Transport Complexity
 
