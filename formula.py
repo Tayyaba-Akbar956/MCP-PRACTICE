@@ -1,0 +1,5 @@
+area_of_circle = "3.14 * r ** 2"
+perimeter_of_circle = "2 * 3.14 * r"
+square_area = "a * a"
+cube_volume = "a * a * a"
+quadratic_formula = "(-b ± sqrt(b**2 - 4*a*c)) / (2*a)"
