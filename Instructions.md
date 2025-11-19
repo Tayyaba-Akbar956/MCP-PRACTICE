@@ -1,4 +1,4 @@
-# To Understand difference in HTTP and JSON Response
+# To Test The server Using Custom Client and Postman
 
 # Instructions To Test Server Using Client.py
 
