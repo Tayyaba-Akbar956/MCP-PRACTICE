@@ -112,18 +112,12 @@ For testing roots:
 uv run uvicorn roots:app --reload
 ```
 
-### Mode 7: Transport Testing (Requests 1-11)
+### Mode 7: Transport(STDIO) Testing (Requests 1-11)
 For testing transport1.py (same tools as main.py):
-```bash
-uv run uvicorn transport1:app --reload
-```
-
-### Running the Client
-
-Execute the test client:
 ```bash
 uv run client.py
 ```
+then send requests in terminal.No need to run he client.
 
 
 ## 📚 Learning Resources
