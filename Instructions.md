@@ -34,8 +34,6 @@ uv run client.py
 
 **Scope**: Requests 12 through 15 in `client.py` will execute automatically. These test resource listing and reading capabilities.
 
-> [!NOTE]
-> **Initialization Process**: For Phases 4, 5, and 6, `client.py` has been updated to automatically send the required `initialize` request (ID: 1) and `notifications/initialized` notification before performing tool calls. This ensures the server is properly initialized according to the MCP protocol.
 
 ## Phase 3: Testing Prompts (Requests 16-19)
 
@@ -46,6 +44,9 @@ uv run uvicorn prompts:app --reload
 
 ### Step 2 : Run Client
 Run `client.py` and use requests 16-19.
+
+> [!NOTE]
+> **Initialization Process**: For Phases 4, 5, and 6, `client.py` has been updated to automatically send the required `initialize` request (ID: 1) and `notifications/initialized` notification before performing tool calls. This ensures the server is properly initialized according to the MCP protocol.
 
 ## Phase 4: Testing Sampling (Requests 20-21)
 
