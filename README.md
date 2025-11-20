@@ -36,6 +36,7 @@ MCP_PRACTICE/
 ├── formula.py           # Sample resource file with formulas
 ├── Instructions.md      # Comprehensive testing guide
 ├── questions.md         # Learning questions about MCP
+├── answers.md           # answer of all questions from question.md
 └── reponses.md          # Expected responses for all 23 requests
 ```
 
