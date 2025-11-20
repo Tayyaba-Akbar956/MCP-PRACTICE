@@ -3,8 +3,8 @@ import httpx
 
 mcp = FastMCP("Demo Server",stateless_http = True)
 
-@mcp.tool("Divide")
-def quiz_format(topic: str, type: str, questions: int,level:str):
+@mcp.tool("Quiz")
+def quiz_format(topic: str, type: str, questions: int, level: str):
     return f"Generating a {type} based quiz on {topic} with {questions} questions at {level} level."
 
 @mcp.tool("Summarize")

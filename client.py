@@ -258,3 +258,172 @@ response15 = requests.post(url, json=body15, headers=headers)
 print("Response for reading resource:")
 print(response15.json())
 print ("\n_"*50)
+
+body16 = {
+    "jsonrpc": "2.0",
+    "method": "prompts/list",
+    "id": 16,
+}
+
+response16 = requests.post(url, json=body16, headers=headers)
+print("Response for prompts list:")
+print(response16.json())
+print ("\n_"*50)
+
+body17 = {
+    "jsonrpc": "2.0",
+    "method": "prompts/get",
+    "id": 17,
+    "params": {
+        "name": "Github Profile",
+        "arguments": {
+            "username": "Tayyaba-Akbar956"
+        }
+    }
+}
+
+response17 = requests.post(url, json=body17, headers=headers)
+print("Response for Github Profile prompt:")
+print(response17.json())
+print ("\n_"*50)
+
+body18 = {
+    "jsonrpc": "2.0",
+    "method": "prompts/get",
+    "id": 18,
+    "params": {
+        "name": "to_divide_numbers"
+    }
+}
+
+response18 = requests.post(url, json=body18, headers=headers)
+print("Response for Divide Numbers prompt:")
+print(response18.json())
+print ("\n_"*50)
+
+body19 = {
+    "jsonrpc": "2.0",
+    "method": "prompts/get",
+    "id": 19,
+    "params": {
+        "name": "format",
+        "arguments": {
+            "doc_content": "This is a test document."
+        }
+    }
+}
+
+response19 = requests.post(url, json=body19, headers=headers)
+print("Response for Format prompt:")
+print(response19.json())
+print ("\n_"*50)
+
+# Initialization Objects
+body_init = {
+    "jsonrpc": "2.0",
+    "method": "initialize",
+    "id": 1,
+    "params": {
+        "protocolVersion": "2024-11-05",
+        "capabilities": {},
+        "clientInfo": {"name": "test-client", "version": "1.0"}
+    }
+}
+
+body_notif = {
+    "jsonrpc": "2.0",
+    "method": "notifications/initialized"
+}
+
+# Sampling Requests (Run with sampling.py)
+print("--- Initialization for Sampling ---")
+response_init_sampling = requests.post(url, json=body_init, headers=headers)
+print("Initialize Response:")
+print(response_init_sampling.json())
+requests.post(url, json=body_notif, headers=headers)
+print("Initialized Notification Sent.")
+print ("\n_"*50)
+
+body20 = {
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "id": 20,
+    "params": {
+        "name": "summarize",
+        "arguments": {
+            "text_to_summarize": "MCP is a protocol for connecting AI models to data sources."
+        }
+    }
+}
+
+response20 = requests.post(url, json=body20, headers=headers)
+print("Response for Summarize (Sampling):")
+print(response20.json())
+print ("\n_"*50)
+
+body21 = {
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "id": 21,
+    "params": {
+        "name": "Story Writer",
+        "arguments": {
+            "topic": "A robot learning to code"
+        }
+    }
+}
+
+response21 = requests.post(url, json=body21, headers=headers)
+print("Response for Story Writer (Sampling):")
+print(response21.json())
+print ("\n_"*50)
+
+# Logs Requests (Run with logs_progress.py)
+print("--- Initialization for Logs ---")
+response_init_logs = requests.post(url, json=body_init, headers=headers)
+print("Initialize Response:")
+print(response_init_logs.json())
+requests.post(url, json=body_notif, headers=headers)
+print("Initialized Notification Sent.")
+print ("\n_"*50)
+
+body22 = {
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "id": 22,
+    "params": {
+        "name": "Web search with logs",
+        "arguments": {
+            "query": "MCP protocol"
+        }
+    }
+}
+
+response22 = requests.post(url, json=body22, headers=headers)
+print("Response for Web Search (Logs):")
+print(response22.json())
+print ("\n_"*50)
+
+# Roots Requests (Run with roots.py)
+print("--- Initialization for Roots ---")
+response_init_roots = requests.post(url, json=body_init, headers=headers)
+print("Initialize Response:")
+print(response_init_roots.json())
+requests.post(url, json=body_notif, headers=headers)
+print("Initialized Notification Sent.")
+print ("\n_"*50)
+
+body23 = {
+    "jsonrpc": "2.0",
+    "method": "tools/call",
+    "id": 23,
+    "params": {
+        "name": "analyze_project",
+        "arguments": {}
+    }
+}
+
+response23 = requests.post(url, json=body23, headers=headers)
+print("Response for Analyze Project (Roots):")
+print(response23.json())
+print ("\n_"*50)
