@@ -140,10 +140,8 @@ This project includes comprehensive learning materials:
 
 ### answers.md
 Complete numbered answers (1-50) for all questions, providing:
-- Concise, accurate explanations
-- Real-world examples from the project
+- Concise, accurate explanationst
 - Error codes and their meanings
-- Best practices and recommendations
 
 These resources are perfect for:
 - Learning MCP protocol fundamentals
